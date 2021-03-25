@@ -49,7 +49,7 @@ The schema for encoding data in each pixel is based on [png-db](https://github.c
 
 ## Implementations
 
-* QGIS Plugin for Exporting GeoPngDB 
+* [QGIS Plugin](https://github.com/sasakiassociates/qgis-geo-png-db) for Exporting GeoPngDB 
 * The Zaru front-end visualization tool for consuming GeoPngDB
 
 ## Similar Solutions
