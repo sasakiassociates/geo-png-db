@@ -15,6 +15,8 @@ documentation for more details.
 
 ### JSON Data
 
+This Json file must be named "geoPngDb.json" and placed at the root alongside the zoom-numbered image folders.
+
 A basic example of a GeoPngDB spec is as follows:
 
 ```
@@ -112,44 +114,6 @@ An offset array with `[x,y]` values is used to specify where each field is repre
                 "min": 0,
                 "max": 12000
             }
-        }
-    ]
-}
-```
-
-#### Detail Overrides
-
-In some cases, datasets may contain different levels of detail (represented by a different maximum zoom limit) for different areas. For example the polar regions are typically data-sparse but occupy a large percentage of the WGS 84 map. It may be wasteful to represent these areas at the same zoom level as the equator. 
-
-Metadata about these zones lets the client-side consumer of these datasets intelligently handle the data at different zoom levels.
-
-These zones are represented as an override to the primary tile tileBounds. Detail overrides must be specified at a higher zoom level than the primary bounds. 
-
-```
-{
-    ...
-    "tileBounds": {
-        "zoom": 12,
-        "xMin": 870,
-        "xMax": 1360,
-        "yMin": 442,
-        "yMax": 1280,
-    },
-    ...
-    "detailOverrides": [
-        "tileBounds": {
-            "zoom": 13,
-            "xMin": 1760,
-            "xMax": 2590,
-            "yMin": 888,
-            "yMax": 2380,
-        },
-        "tileBounds": {
-            "zoom": 14,
-            "xMin": 3640,
-            "xMax": 4200,
-            "yMin": 2280,
-            "yMax": 2800,
         }
     ]
 }

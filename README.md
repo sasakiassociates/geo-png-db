@@ -7,10 +7,12 @@ Data tiles are images that contain data encoded in their pixels. Tiled using the
 Web-based "slippy" maps already take advantage of tiled imagery, and we routinely load and navigate datasets composed of trillions of data points in our browsers. We believe data tiles can provide a solution for browsing and using data effortlessly at any scale. The “GeoPngDB” format builds on existing solutions to provide a browser-friendly way of encoding raw data for consumption by web-based tools.
 
 ## Current Version 1.0
-The current version of the GeoPngDB specification is [GeoPngDB 1.0](./specifications/1.0/README.md). See this folder for detailed specs.
+The current version of the GeoPngDB specification is 1.0. See the [GeoPngDB 1.0](./specifications/1.0/README.md) folder for detailed specs. 
+
+A working draft with additional proposed features can be found in the [draft folder](./specifications/draft/1.1/README.md)
 
 ## Motivation
-Raster formats are currently an underappreciated resource for sharing raw data for web-based tools. Thankfully solutions like Cloud Optimized GeoTIFFs (COGs) are poised to bring large-scale raster datasets to the main-stream for consumption in web-connected tools. However, COGs and other solutions currently require server-side processing as well as more intensive client side processing.
+Raster formats are currently an underappreciated resource for sharing raw data for web-based tools. Thankfully solutions like Cloud Optimized GeoTIFFs (COGs) are poised to bring large-scale raster datasets to the main-stream for consumption in web-connected tools. However, COGs and other solutions currently require server-side processing as well as more intensive client side processing and don't take advantage of many aspects of web-based techniques and cloud-based architectures.
 
 ### Advantages of GeoPngDB
 
