@@ -1,0 +1,4 @@
+Run in terminal:
+pbf BlockRecord.proto > BlockRecord.js
+
+pbf LodesRecord.proto > LodesRecord.js

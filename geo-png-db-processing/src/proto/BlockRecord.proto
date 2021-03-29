@@ -1,0 +1,32 @@
+message BlockRecords {
+  message BlockRecord {
+    required string geoId = 1;
+    required int32 population = 2;
+    optional HousingUnits housingUnits = 3;
+    optional Race race = 4;
+    optional Age age = 5;
+
+    message HousingUnits {
+      optional int32 total = 1;
+      optional int32 occupied = 2;
+      optional int32 vacant = 3;
+    }
+    message Race {
+      optional int32 total = 1;
+      optional int32 white = 2;
+      optional int32 black = 3;
+      optional int32 asian = 4;
+      optional int32 native = 5;
+      optional int32 other = 6;
+      optional int32 hispanic = 7;
+    }
+    message Age {
+      optional int32 u10 = 1;
+      optional int32 u18 = 2;
+      optional int32 u30 = 3;
+      optional int32 u65 = 4;
+      optional int32 over65 = 5;
+    }
+  }
+  repeated BlockRecord blocks = 1;
+}

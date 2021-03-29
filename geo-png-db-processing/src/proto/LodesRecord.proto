@@ -1,0 +1,93 @@
+message LodesRecords {
+    message LodesRecord {
+        required string geoId = 1;
+        required int32 jobs = 2;
+        optional Age age = 3;
+        optional Income income = 4;
+        optional Naics naics = 5;
+        optional Race race = 6;
+        optional Ethnicity ethnicity = 7;
+        optional Education education = 8;
+        optional Sex sex = 9;
+        optional FirmAge firmAge = 10;
+        optional FirmSize firmSize = 11;
+
+        message Age {
+            optional int32 u30 = 1;
+            optional int32 u55 = 2;
+            optional int32 o55 = 3;
+        }
+
+        message Income {
+            optional int32 u1250 = 1;
+            optional int32 u3333 = 2;
+            optional int32 o3333 = 3;
+        }
+
+        message Naics {
+            optional int32 ag = 1;
+            optional int32 min = 2;
+            optional int32 util = 3;
+            optional int32 cons = 4;
+            optional int32 mfg = 5;
+            optional int32 whole = 6;
+            optional int32 retail = 7;
+            optional int32 trans = 8;
+            optional int32 info = 9;
+            optional int32 fin = 10;
+            optional int32 re = 11;
+            optional int32 tech = 12;
+            optional int32 mgmt = 13;
+            optional int32 waste = 14;
+            optional int32 ed = 15;
+            optional int32 health = 16;
+            optional int32 rec = 17;
+            optional int32 food = 18;
+            optional int32 other = 19;
+            optional int32 pa = 20;
+        }
+
+        message Race {
+            optional int32 white = 1;
+            optional int32 black = 2;
+            optional int32 native = 3;
+            optional int32 asian = 4;
+            optional int32 pacific = 5;
+            optional int32 twoOrMore = 6;
+        }
+
+        message Ethnicity {
+            optional int32 nonHispanic = 1;
+            optional int32 hispanic = 2;
+        }
+
+        message Education {
+            optional int32 ltHs = 1;
+            optional int32 hs = 2;
+            optional int32 coll = 3;
+            optional int32 ba = 4;
+        }
+
+        message Sex {
+            optional int32 m = 1;
+            optional int32 f = 2;
+        }
+
+        message FirmAge {
+            optional int32 u2 = 1;
+            optional int32 u4 = 2;
+            optional int32 u6 = 3;
+            optional int32 u11 = 4;
+            optional int32 g11 = 5;
+        }
+
+        message FirmSize {
+            optional int32 u20 = 1;
+            optional int32 u50 = 2;
+            optional int32 u250 = 3;
+            optional int32 u500 = 4;
+            optional int32 g500 = 5;
+        }
+    }
+    repeated LodesRecord blocks = 1;
+}
