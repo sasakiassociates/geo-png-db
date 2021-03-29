@@ -3,9 +3,9 @@ const os = require('os');
 const Jimp = require('jimp');
 const PbfTiles = require('../gis/PbfTiles');
 const PngDbEncodings = require('../encodings/PngDbEncodings');
-const TileEncodings = require('../../modules/encodings/TileEncodings');
+const TileEncodings = require('../encodings/TileEncodings');
 const Utils = require("../Utils");
-const pointsWithinPolygon = require('@turf/points-within-polygon').default;
+// const pointsWithinPolygon = require('@turf/points-within-polygon').default;
 
 /**
  * Creates a new instance of RasterizePoints.

@@ -1,0 +1,24 @@
+{
+  "name": "geo-png-db-processing",
+  "version": "1.0.0",
+  "description": "Utilities for processing PBF, GeoJson and Shapefiles into GeoPngDB tiles.",
+  "main": "index.js",
+  "repository": "https://github.com/sasakiassociates/geo-png-db",
+  "author": "kgoulding@sasaki.com",
+  "license": "MIT",
+  "dependencies": {
+    "@mapbox/tilebelt": "^1.0.2",
+    "@turf/points-within-polygon": "^6.3.0",
+    "async": "^3.2.0",
+    "geobuf": "^3.0.2",
+    "jimp": "^0.16.1",
+    "mkdirp": "^1.0.4",
+    "pbf": "^3.2.1",
+    "proj4": "^2.7.2",
+    "shapefile": "^0.6.6",
+    "unzipper": "^0.10.11"
+  },
+  "optionalDependencies": {
+    "aws-sdk": "^2.874.0"
+  }
+}

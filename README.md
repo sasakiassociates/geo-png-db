@@ -39,6 +39,8 @@ Unlike vector datasets that require aggressive simplification and loss of fideli
 
 ![Illustration showing how values for 4 pixels from one zoom level are summed into a single pixel at the level above.](./img/pyramid.svg)
 
+Seamless, reliable aggregation makes GeoPngDB a solution for representing data originating in both vector and raster datasets. Raster aggregation maintains the highest spatial fidelity possible as every on-screen pixel accurately represents all values from larger zooms.
+
 #### Powerful Parallelization
 Because each tile is represented independently as a 256x256 image, very lightweight processing can be used when generating tiles. This allows tiles to be processed in a massively parallel fashion using cloud-based architectures. Truly massive datasets can be processed in manageable chunks on affordable microservices (such as AWS Lambda or Google Cloud Functions).
 
@@ -49,6 +51,7 @@ The schema for encoding data in each pixel is based on [png-db](https://github.c
 
 ## Implementations
 
+* [geo-png-db-processing](./geo-png-db-processing/README.md) utilities for processing PBF, GeoJson and Shapefiles into GeoPngDB tiles.
 * [QGIS Plugin](https://github.com/sasakiassociates/qgis-geo-png-db) for Exporting GeoPngDB 
 * The [Zaru](https://github.com/sasakiassociates/zaru) front-end visualization tool for consuming GeoPngDB
 

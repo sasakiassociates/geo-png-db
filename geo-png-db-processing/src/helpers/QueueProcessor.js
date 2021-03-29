@@ -1,7 +1,7 @@
-const process = require('process');//not technically needed (always available)
-const request = require('request');
-const fs = require('fs');
-const os = require('os');
+// const process = require('process');//not technically needed (always available)
+// const request = require('request');
+// const fs = require('fs');
+// const os = require('os');
 let AWS = require('aws-sdk');
 AWS.config.update({region: 'us-east-1'});
 const async = require('async');
