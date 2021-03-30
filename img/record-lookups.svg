@@ -78,7 +78,7 @@
      transform="translate(-12.294398,-14.967093)"
      id="layer1">
     <image
-       xlink:href="../../../workflows/DataPrep/projects/denver/trees/data/outputs/db/Date%20Inventoried.png"
+       xlink:href="png-db-example.png"
        style="stroke-width:2.17844"
        width="62.063694"
        height="62.063694"

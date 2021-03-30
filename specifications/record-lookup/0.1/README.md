@@ -15,7 +15,7 @@ level. See this reference: https://www.maptiler.com/google-maps-coordinates-tile
 A png-db database is an image database containing *non-spatial* records where each pixel represents a record. Records are uniquely identified by their position in the image with an index scanning left to right, then top to bottom. Any number of fields can be stored in this format with each column producing a different image. TEXT, INTEGER and DECIMAL data types are supported and described by metadata associated with the data image.
 
 ![Screenshot of png-db folder showing metadata files and data images.](../../../img/png-db-example.png)
-This screenshot shows how each column is stored as an image file. In this example of 98778 records, the images are 315x315 squares with file sizes ranging from 46 KB to 235 KB.  
+This screenshot shows how each column is stored as an image file. In this example of 98778 records, the images are 315x315 squares with file sizes ranging from 46 KB to 235 KB. Much larger datasets are supported: many GPUs now support 4096x4096 images which would allow 16 million records. 
 
 ### Record Lookups
 When representing point records on a raster grid, multiple points may fall within a single grid cell. Each pixel of the spatial image contains a "lookup" reference to the records that fall within that cell. Records are referenced via a sequential index so that they may be directly accessed from a png-db pixel.

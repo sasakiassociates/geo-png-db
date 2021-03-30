@@ -1,27 +1,27 @@
 # geo-png-db
 GeoPngDB is a tiled geospatial data format capable of representing global-scale data sets at high resolution in a format natively supported by web browsers.
 
-## Basic Idea
+## Concept
 Data tiles are images that contain data encoded in their pixels. Tiled using the standard web tile scheme, they can provide instant access to spatial data at a practically unlimited scale. As interactive data visualization becomes more mainstream, there is an increasing need to quickly manipulate and represent massive datasets within the browser. The scale of these datasets often makes vector datasets inefficient and unable to deliver a smooth user-experience.
 
 Web-based "slippy" maps already take advantage of tiled imagery, and we routinely load and navigate datasets composed of trillions of data points in our browsers. We believe data tiles can provide a solution for browsing and using data effortlessly at any scale. The “GeoPngDB” format builds on existing solutions to provide a browser-friendly way of encoding raw data for consumption by web-based tools.
 
-### Schemas
+## Schemas
 
 There are currently 2 schemas for GeoPngDB:
 
-## Basic
+### Basic
 The basic schema represents spatial data directly in each pixel and provides metadata used to interpret the data when reading the value.
 
-### Current Version 1.0
+#### Current Version 1.0
 The current version of the basic GeoPngDB specification is 1.0. See the [GeoPngDB Basic Specification 1.0](specifications/basic/1.0/README.md) folder for detailed specs. 
 
 A working draft with additional proposed features can be found in the [draft folder](specifications/basic/draft/1.1/README.md)
 
-## Record Lookup
+### Record Lookup
 The record lookup schema uses spatial reference images along with a [png-db](https://github.com/sasakiassociates/png-db) record database to represent large geospatial datasets efficiently. Unlike the basic version which can scale indefinitely without workarounds, the record lookup schema requires some additional considerations to achieve massive scale.
 
-### Current Version 0.1 (beta)
+#### Current Version 0.1 (beta)
 The current version of the record-lookup GeoPngDB specification is 0.1 (beta). See the [GeoPngDB Record Lookup Specification 0.1](specifications/record-lookup/0.1/README.md) folder for detailed specs.
 
 ## Motivation
