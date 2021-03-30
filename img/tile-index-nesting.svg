@@ -5,9 +5,9 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   width="57.381779mm"
-   height="57.777912mm"
-   viewBox="0 0 57.381779 57.777913"
+   width="122.19453mm"
+   height="62.13633mm"
+   viewBox="0 0 122.19453 62.136331"
    version="1.1"
    id="svg3978">
   <defs
@@ -27,7 +27,7 @@
   <g
      style="stroke-width:3.10153"
      id="layer1"
-     transform="matrix(0.32242166,0,0,0.32242166,-1.4104361,-0.33374885)">
+     transform="matrix(0.32242166,0,0,0.32242166,0.74971911,2.1467167)">
     <rect
        y="7.2381887"
        x="10.577565"
