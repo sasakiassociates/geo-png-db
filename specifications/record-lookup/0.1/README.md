@@ -15,6 +15,7 @@ level. See this reference: https://www.maptiler.com/google-maps-coordinates-tile
 A png-db database is an image database containing *non-spatial* records where each pixel represents a record. Records are uniquely identified by their position in the image with an index scanning left to right, then top to bottom. Any number of fields can be stored in this format with each column producing a different image. TEXT, INTEGER and DECIMAL data types are supported and described by metadata associated with the data image.
 
 ![Screenshot of png-db folder showing metadata files and data images.](../../../img/png-db-example.png)
+
 This screenshot shows how each column is stored as an image file. In this example of 98778 records, the images are 315x315 squares with file sizes ranging from 46 KB to 235 KB. Much larger datasets are supported: many GPUs now support 4096x4096 images which would allow 16 million records. 
 
 ### Record Lookups
@@ -35,9 +36,11 @@ The basic tile schema (shown on the left side of the comparison) aggregates nume
 Each spatial cell needs to specify a range of indices in the data tile. Ideally we want to be able to use the same data tile for all spatial tiles so that it only needs to be loaded once. By using a quad-tree style ordering, we can ensure that ranges will retain the same order at different tile levels.
 
 ![Illustration showing how tile indices are organized.](../../../img/tile-index-nesting.svg)
+
 Note that the values here reflect order of the spatial cells used to generate indices (not the actual indices).
 
 ![Illustration showing how quad tree tiles indices are nested as related to lookup indices.](../../../img/quad-tree-start-stops.svg)
+
 Each spatial cell contains a range of indices representing the records contained in that cell. For example cell 0 (top left) contains records with indices 0 through 4. This is represented by the "start" and "stop" values on the spatial tiles. Note how the "start" value in the top left cell of each 4 cell "quad" remains unchanged as we aggregate the cells to the next zoom level. The same is true for the "stop" value in the bottom right cell of the "quad". This way all records contained within a 4 cell quad are also contained by the pyramid parent of that 4 cell quad.
 
 ### Querying
