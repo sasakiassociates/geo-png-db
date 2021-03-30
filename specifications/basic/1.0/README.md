@@ -1,4 +1,4 @@
-# GeoPngDB version 1.0
+# GeoPngDB Basic version 1.0
 
 ## Format
 

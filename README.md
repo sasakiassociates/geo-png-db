@@ -6,10 +6,23 @@ Data tiles are images that contain data encoded in their pixels. Tiled using the
 
 Web-based "slippy" maps already take advantage of tiled imagery, and we routinely load and navigate datasets composed of trillions of data points in our browsers. We believe data tiles can provide a solution for browsing and using data effortlessly at any scale. The “GeoPngDB” format builds on existing solutions to provide a browser-friendly way of encoding raw data for consumption by web-based tools.
 
-## Current Version 1.0
-The current version of the GeoPngDB specification is 1.0. See the [GeoPngDB 1.0](./specifications/1.0/README.md) folder for detailed specs. 
+### Schemas
 
-A working draft with additional proposed features can be found in the [draft folder](./specifications/draft/1.1/README.md)
+There are currently 2 schemas for GeoPngDB:
+
+## Basic
+The basic schema represents spatial data directly in each pixel and provides metadata used to interpret the data when reading the value.
+
+### Current Version 1.0
+The current version of the basic GeoPngDB specification is 1.0. See the [GeoPngDB Basic Specification 1.0](specifications/basic/1.0/README.md) folder for detailed specs. 
+
+A working draft with additional proposed features can be found in the [draft folder](specifications/basic/draft/1.1/README.md)
+
+## Record Lookup
+The record lookup schema uses spatial reference images along with a [png-db](https://github.com/sasakiassociates/png-db) record database to represent large geospatial datasets efficiently. Unlike the basic version which can scale indefinitely without workarounds, the record lookup schema requires some additional considerations to achieve massive scale.
+
+### Current Version 0.1 (beta)
+The current version of the record-lookup GeoPngDB specification is 0.1 (beta). See the [GeoPngDB Record Lookup Specification 0.1](specifications/record-lookup/0.1/README.md) folder for detailed specs.
 
 ## Motivation
 Raster formats are currently an underappreciated resource for sharing raw data for web-based tools. Thankfully solutions like Cloud Optimized GeoTIFFs (COGs) are poised to bring large-scale raster datasets to the main-stream for consumption in web-connected tools. However, COGs and other solutions currently require server-side processing as well as more intensive client side processing and don't take advantage of many aspects of web-based techniques and cloud-based architectures.
@@ -42,7 +55,7 @@ Unlike vector datasets that require aggressive simplification and loss of fideli
 
 ![Illustration showing how values for 4 pixels from one zoom level are summed into a single pixel at the level above.](./img/pyramid.svg)
 
-Seamless, reliable aggregation makes GeoPngDB a solution for representing data originating in both vector and raster datasets. Raster aggregation from vector geometries maintains the highest spatial fidelity possible as every on-screen pixel accurately represents all values from larger zooms.
+Seamless, reliable aggregation makes GeoPngDB a solution for representing data originating in both vector and raster datasets. Raster aggregation from vector geometries maintains the highest spatial fidelity possible as every on-screen pixel accurately represents all values from larger zooms. By comparison, vector-based aggregation uses spatially inconsistent nesting which results in unexpected jumps for either analysis or representation. For example, think about the spatial inconsistencies when the NYC population gets distributed to all of NY state in a dot-density map.
 
 #### Powerful Parallelization
 Because each tile is represented independently as a 256x256 image, very lightweight processing can be used when generating tiles. This allows tiles to be processed in a massively parallel fashion using cloud-based architectures. Truly massive datasets can be processed in manageable chunks on affordable microservices (such as AWS Lambda or Google Cloud Functions).
