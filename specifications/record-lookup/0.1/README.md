@@ -28,6 +28,7 @@ To account for the array of records that fall within each cell, two spatial imag
 At lower zoom levels, records are aggregated, so that each pixel accurately represents all pixels "below" that pixel in the pyramid. 
 
 ![Illustration showing how values for 4 pixels from one zoom level are summed into a single pixel at the level above for two different methods.](../../../img/pyramid-comparison.svg)
+
 The basic tile schema (shown on the left side of the comparison) aggregates numeric values at each level of the pyramid. The record lookup aggregates individual records in much the same way.
 
 ### Quad-tree indexing
@@ -45,7 +46,7 @@ In order to use record level data spatially, we need to be able to build queries
 ![Illustration showing how queries can be created by matching and summing.](../../../img/query-sums.svg)
 
 ### Spatial Tile Structure
-Spatial tiles are structured to include the start and stop reference tiles in a single image. This allows better compression, fewer http queries and fewer image "slots" on the GPU.
+Spatial tiles are structured to include the start and stop reference tiles in a single image. Combining images allows better compression, requires fewer http queries and takes up fewer image "slots" on the GPU.
 
 An optional "edge" zone allows us to include a single row of pixels from neighboring tiles. This small accommodation lets us render "plus" shapes to represent points. Though nowhere near as flexible as vector based point rendering, we've found that the plus shapes read much clearer than single pixels.
 
