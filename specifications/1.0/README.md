@@ -30,11 +30,11 @@ A basic example of a GeoPngDB spec is as follows:
     "type": "GeoPngDB",
     "version": "1.0",
     "metadata": {
-        "field":"USPopulationByRace",
         "description": "U.S. population data by race.",
         "metric": "# people",
-        "sourceField": "U.S. Census",
+        "source": "U.S. Census",
         "sourceLink": "https://www.census.gov/topics/population/data.html",
+        "sourceField":"USPopulationByRace",
     },
     "tileBounds": {
         "zoom": 12,
