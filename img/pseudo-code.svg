@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   id="svg9495"
+   version="1.1"
+   viewBox="0 0 202.85028 91.686661"
+   height="91.686661mm"
+   width="202.85028mm">
+  <defs
+     id="defs9489">
+    <marker
+       orient="auto"
+       refY="0"
+       refX="0"
+       id="Arrow1Lend"
+       style="overflow:visible">
+      <path
+         id="path2679"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         style="fill:#e6e6e6;fill-opacity:1;fill-rule:evenodd;stroke:#e6e6e6;stroke-width:1pt;stroke-opacity:1"
+         transform="matrix(-0.8,0,0,-0.8,-10,0)" />
+    </marker>
+  </defs>
+  <metadata
+     id="metadata9492">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0.1322915,-1.7478542)"
+     id="layer1">
+    <rect
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="rect2359"
+       width="15.113621"
+       height="15.230957"
+       x="21.558233"
+       y="6.1897125" />
+    <text
+       id="text2339-9"
+       y="15.008621"
+       x="48.902317"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.52777px;line-height:125%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';stroke-width:0.264583px"
+         y="15.008621"
+         x="48.902317"
+         id="tspan2357-3">if num_records &gt; MAX_RECORDS</tspan><tspan
+         style="stroke-width:0.264583px"
+         y="19.418335"
+         x="48.902317"
+         id="tspan2610" /><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';stroke-width:0.264583px"
+         y="23.828047"
+         x="48.902317"
+         id="tspan2491">{</tspan><tspan
+         style="stroke-width:0.264583px"
+         y="28.237761"
+         x="48.902317"
+         id="tspan2493" /><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';stroke-width:0.264583px"
+         y="32.647472"
+         x="48.902317"
+         id="tspan2483">   generate sampled data tile for this tile address</tspan><tspan
+         style="stroke-width:0.264583px"
+         y="37.057186"
+         x="48.902317"
+         id="tspan2487" /><tspan
+         style="stroke-width:0.264583px"
+         y="41.4669"
+         x="48.902317"
+         id="tspan2524" /><tspan
+         style="stroke-width:0.264583px"
+         y="45.876614"
+         x="48.902317"
+         id="tspan2526" /><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';stroke-width:0.264583px"
+         y="50.286324"
+         x="48.902317"
+         id="tspan2561">   split in quads</tspan><tspan
+         style="stroke-width:0.264583px"
+         y="54.696037"
+         x="48.902317"
+         id="tspan2563" /><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';stroke-width:0.264583px"
+         y="59.105751"
+         x="48.902317"
+         id="tspan2565">   repeat for each new cell</tspan><tspan
+         style="stroke-width:0.264583px"
+         y="63.515465"
+         x="48.902317"
+         id="tspan2622" /><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';stroke-width:0.264583px"
+         y="67.925179"
+         x="48.902317"
+         id="tspan2624">} else {</tspan><tspan
+         style="stroke-width:0.264583px"
+         y="72.334892"
+         x="48.902317"
+         id="tspan2626" /><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';stroke-width:0.264583px"
+         y="76.744606"
+         x="48.902317"
+         id="tspan2628">   generate complete data tile for this address</tspan><tspan
+         style="stroke-width:0.264583px"
+         y="81.154312"
+         x="48.902317"
+         id="tspan2630" /><tspan
+         style="stroke-width:0.264583px"
+         y="85.564026"
+         x="48.902317"
+         id="tspan2632" /><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';stroke-width:0.264583px"
+         y="89.97374"
+         x="48.902317"
+         id="tspan2634">}</tspan><tspan
+         style="stroke-width:0.264583px"
+         y="94.383453"
+         x="48.902317"
+         id="tspan2481" /></text>
+    <rect
+       y="43.513901"
+       x="21.558233"
+       height="15.230957"
+       width="15.113621"
+       id="rect2501"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.499999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    <image
+       xlink:href="../../../workflows/DataPrep/projects/denver/trees/data/outputs/db/Date%20Inventoried.png"
+       style="stroke-width:12.5171"
+       width="10.8014"
+       height="10.8014"
+       preserveAspectRatio="none"
+       id="image829-7"
+       x="30.646765"
+       y="25.742874" />
+    <g
+       id="g2289-8"
+       transform="matrix(0.94997675,0,0,0.94950703,167.58809,-139.13423)"
+       style="stroke:#ff6600;stroke-width:0.526459">
+      <rect
+         y="192.8571"
+         x="-153.19405"
+         height="7.5042877"
+         width="7.4458761"
+         id="rect2280-4"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ff6600;stroke-width:0.263229;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+      <rect
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ff6600;stroke-width:0.263229;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+         id="rect2282-8"
+         width="7.4458761"
+         height="7.5042877"
+         x="-145.74817"
+         y="192.8571" />
+      <rect
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ff6600;stroke-width:0.263229;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+         id="rect2285-2"
+         width="7.4458761"
+         height="7.5042877"
+         x="-153.19405"
+         y="200.36139" />
+      <rect
+         y="200.36139"
+         x="-145.74817"
+         height="7.5042877"
+         width="7.4458761"
+         id="rect2287-9"
+         style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ff6600;stroke-width:0.263229;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.9038px;line-height:125%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';letter-spacing:0px;word-spacing:0px;fill:#ac9393;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="51.967838"
+       y="37.28389"
+       id="text2176-6"><tspan
+         x="51.967838"
+         y="37.28389"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';fill:#ac9393;stroke-width:0.264583px"
+         id="tspan2184-5">sample tile is used for this zoom level only</tspan></text>
+    <text
+       id="text2608"
+       y="41.120346"
+       x="51.967838"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.9038px;line-height:125%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';letter-spacing:0px;word-spacing:0px;fill:#ac9393;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         id="tspan2606"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';fill:#ac9393;stroke-width:0.264583px"
+         y="41.120346"
+         x="51.967838">1 sample tile exists at each zoom level until MAX_RECORDS not exceeded</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.9389px;line-height:125%;font-family:Korolev;-inkscape-font-specification:Korolev;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="33.170963"
+       y="32.920883"
+       id="text2662"><tspan
+         id="tspan2660"
+         x="33.170963"
+         y="32.920883"
+         style="fill:#ffffff;stroke-width:0.264583px">1/x</tspan></text>
+    <image
+       xlink:href="../../../workflows/DataPrep/projects/denver/trees/data/outputs/db/Date%20Inventoried.png"
+       y="72.140854"
+       x="30.646765"
+       id="image2664"
+       preserveAspectRatio="none"
+       height="10.8014"
+       width="10.8014"
+       style="stroke-width:12.5171" />
+    <text
+       id="text2668"
+       y="79.318863"
+       x="33.170963"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.9389px;line-height:125%;font-family:Korolev;-inkscape-font-specification:Korolev;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="fill:#ffffff;stroke-width:0.264583px"
+         y="79.318863"
+         x="33.170963"
+         id="tspan2666">1/1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.9038px;line-height:125%;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';letter-spacing:0px;word-spacing:0px;fill:#ac9393;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="51.967838"
+       y="82.263046"
+       id="text2672"><tspan
+         x="51.967838"
+         y="82.263046"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Open Sans';-inkscape-font-specification:'Open Sans';fill:#ac9393;stroke-width:0.264583px"
+         id="tspan2670">all inner tiles can use this data tile</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#e6e6e6;stroke-width:0.264999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
+       d="M 23.636074,55.271977 C 0.59237441,40.362307 -3.4841656,16.563667 18.873564,15.584477"
+       id="path2674" />
+  </g>
+</svg>
