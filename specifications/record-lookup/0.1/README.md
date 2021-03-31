@@ -69,16 +69,17 @@ Given these constraints, the most workable solution would appear to be a sample 
 
 ![Illustration showing how quad tiles may be subdivided.](../../../img/adaptive-quads.svg)
 
-When complete data is available, the full png-db image set can be used at that zoom level - and all zoom levels beyond it. In the case of sampled data, either a more detailed sample - or complete data will be available at the next zoom level. The following pseudo-code shows the logic for producing sample data tiles based on a given maximum number of records that we want to use for png-db images (MAX_RECORDS).
+When complete data is available, the full png-db image set can be used at that zoom level - and all zoom levels beyond it. In the case of sampled data, either a more detailed sample - or complete data will be available at the next zoom level. The following pseudo-code shows the logic for producing sample data tiles based on a given maximum number of records that we want to use for png-db images (MAX_RECORDS). "num_records" is the number of records contained within the bounds of the tile.
 
 ![Pseudo-code showing logic for sampling vs complete data.](../../../img/pseudo-code.svg)
 
 The same uneven distribution that occurs across tiles also occurs within tiles. Certain pixels may have a much greater record density than others. To help ensure that sparse pixels aren't filtered in a way that changes the overall impression of the image, we can adopt a per-pixel sampling strategy.
 
-![Mock histogram showing how dense pixels can be sampled more aggressively.](../../../img/per-pixel sampling strategy.svg)
+![Mock histogram showing how dense pixels can be sampled more aggressively.](../../../img/per-pixel-sampling-strategy.svg)
 
 Given that millions of records will persist for any given tile, the sample data should be rich enough to allow querying and accurately represent the dataset at all zoom levels.
 
-The one troublesome case for the sampling approach is where we have a mix of sparse data and very dense data in the same area. For example in a bird observation dataset where Canada Geese and California Condors are both represented, there may only be a handful of condor records. A filter for condors applied to the sampled data might miss key records while looking at the global scale. These records will show up once zoomed in to a level where complete data is available, but may be missed by the sampling.
+The one troublesome case for the sampling approach is where we have a mix of sparse data and very dense data in the same area. For example in a bird observation dataset where Canada Geese and California Condors are both represented, there may only be a handful of condor records. A filter for condors applied to the sampled data might miss key records while looking at the global scale. These records will show up once zoomed in to a level where complete data is available, but may be missed by the sampling. A workaround in this case would be to create a separate record set for the rare bird records so that they are not lost in the sampling. Multiple sources can be combined on the front-end such that the would be opaque to end users.
+
 
 
