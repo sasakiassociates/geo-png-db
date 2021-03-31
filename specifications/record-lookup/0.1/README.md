@@ -57,7 +57,7 @@ The 4th square is currently unused, but may allow future expansion.
 
 # Conceptual
 
-While the record lookup solution has been tested in proofs-of-concept and real-world use cases, the following solution is purely conceptual.
+Unlike the record lookup solution that has been tested in proofs-of-concept and real-world use cases, the following solution is purely conceptual.
 
 ## Accommodating (actual) big data
 
