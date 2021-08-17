@@ -80,7 +80,7 @@ MapZen's terrarium tiles use the exact same WGS 84 tile scheme to represent data
 [COGs](https://www.cogeo.org/) provide an efficient solution for serving large GeoTIFFs via web APIs. 
 * Like GeoPngDB tiles, COGs can be hosted cheaply on static storage (such as AWS S3), however to be used in web applications a backend web service is required to serve the data and respond to queries.
 * It is not possible to achieve real-time feedback with COGs as all queries must be handled by a backend API.
-* COGs are hosted as large TIFF files that can be impressively large, but unlikely to suitable for global high resolutions datasets. Practical limitations make this impossible to scale to the multi-petabyte data density that can feasibly be achieved with static tiles. 
+* COGs are hosted as large TIFF files that can be impressively large, but unlikely to be suitable for global high resolutions datasets. Practical limitations make this impossible to scale to the multi-petabyte data density that can feasibly be achieved with static tiles. 
 
 ### PBF Vector Tiles
 Vector tiles stored in the PBF format are typically stored using the same WGS 84 tile scheme. Like GeoPngDB, they are well suited to take advantage of GPU rendering on the client side and can produce beautiful graphics in real-time. Vector data is often more efficient than raster data - particularly when a vector shape spans many pixels, and the PBF format offers good compression along with fast load times. Vector tiles are an excellent solution for cartography where the readability of the map requires less detail to be rendered at lower zoom levels. 
