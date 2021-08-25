@@ -2,7 +2,7 @@
 GeoPngDB is a tiled geospatial data format capable of representing global-scale data sets at high resolution in a format natively supported by web browsers.
 
 ## Concept
-Data tiles are images that contain data encoded in their pixels. Tiled using the standard web tile scheme, they can provide instant access to spatial data at a practically unlimited scale. As interactive data visualization becomes more mainstream, there is an increasing need to quickly manipulate and represent massive datasets within the browser. The scale of these datasets often makes vector datasets inefficient and unable to deliver a smooth user-experience.
+Data tiles are images that contain data encoded in their pixels. Tiled using the standard web tile scheme, they can provide instant access to spatial data at a practically unlimited scale. As interactive data visualization and global geospatial analysis becomes more mainstream, there is an increasing need to quickly manipulate and represent massive datasets within the browser. The scale of these datasets often makes vector datasets inefficient and unable to deliver a smooth user-experience.
 
 Web-based "slippy" maps already take advantage of tiled imagery, and we routinely load and navigate datasets composed of trillions of data points in our browsers. We believe data tiles can provide a solution for browsing and using data effortlessly at any scale. The “GeoPngDB” format builds on existing solutions to provide a browser-friendly way of encoding raw data for consumption by web-based tools.
 
@@ -82,6 +82,12 @@ MapZen's terrarium tiles use the exact same WGS 84 tile scheme to represent data
 * It is not possible to achieve real-time feedback with COGs as all queries must be handled by a backend API.
 * COGs are hosted as large TIFF files that can be impressively large, but unlikely to suitable for global high resolutions datasets. Practical limitations make this impossible to scale to the multi-petabyte data density that can feasibly be achieved with static tiles. 
 
+### Lerc Data Tiles
+[ESRI Lerc](https://github.com/Esri/lerc) "LERC is an open-source image or raster format which supports rapid encoding and decoding for any pixel type (not just RGB or Byte)". LERC is not natively understood by common browsers and requires translation, however libraries are available for a number of languages. For data tiles in a web tool, the compression advantages offered by LERC are likely offset in terms of performance by the CPU requirements to translate the files. GeoPngDB avoids this overhead by using a native format that browsers already understand.
+
+### Open Data Cube
+[Open Data Cube](https://github.com/opendatacube) "presents a common analytical framework composed of a series of data structures and tools which facilitate the organization and analysis of large gridded data collections". It provides a similar solution to COGs requiring backend services and allows sophisticated query and analysis capabilities. GeoPngDB could provide faster, cheaper access to high resolution outputs from aerial image analysis.
+
 ### PBF Vector Tiles
 Vector tiles stored in the PBF format are typically stored using the same WGS 84 tile scheme. Like GeoPngDB, they are well suited to take advantage of GPU rendering on the client side and can produce beautiful graphics in real-time. Vector data is often more efficient than raster data - particularly when a vector shape spans many pixels, and the PBF format offers good compression along with fast load times. Vector tiles are an excellent solution for cartography where the readability of the map requires less detail to be rendered at lower zoom levels. 
 
@@ -91,3 +97,8 @@ Both the data volume and the rendering overhead can make high-fidelity vector re
 
 Most vector tiles are well suited to be rendered into GeoPngDB tiles as they use the same tiling scheme. A hybrid approach may be used to allow accurate global-scale representation of the vector tiles (using GeoPngDB) while also taking advantage of vector-enabled interactivity and rendering effects at greater zoom levels. This experience can be seamless and opaque to the end user. 
 
+### Grid Viz
+[Grid Viz](https://eurostat.github.io/gridviz/) uses CSV for data and three.js point cloud for visualisation. This is essentially a vector-based representation of raster grids allowing fast representation of large datasets. All rows must be loaded as CSV data which imposes practical record limits for big data, but three.js point clouds can allow animation or other techniques not easily achieved through direct raster representation. The approach is quite different, but included here because the capabilities may appear superficially similar.
+
+### imMens
+[imMens: Real-time Visual Querying of Big Data](https://github.com/uwdata/imMens) ([PDF paper](https://sfu-db.github.io/cmpt884-fall16/Papers/immens.pdf)) is a very similar solution for encoding data image tiles, querying and displaying them on the GPU. imMens offers sophisticated solutions for aggregation and binning, and support for 5 dimensional data cubes. The open source library is not being actively developed, but certain aspects of their approach could be useful in expanding the capabilities of "record-lookup" datasets.  
