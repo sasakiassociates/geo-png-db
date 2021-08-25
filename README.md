@@ -80,7 +80,7 @@ MapZen's terrarium tiles use the exact same WGS 84 tile scheme to represent data
 [COGs](https://www.cogeo.org/) provide an efficient solution for serving large GeoTIFFs via web APIs. 
 * Like GeoPngDB tiles, COGs can be hosted cheaply on static storage (such as AWS S3), however to be used in web applications a backend web service is required to serve the data and respond to queries.
 * It is not possible to achieve real-time feedback with COGs as all queries must be handled by a backend API.
-* COGs are hosted as large TIFF files that can be impressively large, but unlikely to suitable for global high resolutions datasets. Practical limitations make this impossible to scale to the multi-petabyte data density that can feasibly be achieved with static tiles. 
+* COGs are hosted as large TIFF files that can be impressively large, but unlikely to be suitable for global high resolutions datasets. Practical limitations make this impossible to scale to the multi-petabyte data density that can feasibly be achieved with static tiles. 
 
 ### Lerc Data Tiles
 [ESRI Lerc](https://github.com/Esri/lerc) "LERC is an open-source image or raster format which supports rapid encoding and decoding for any pixel type (not just RGB or Byte)". LERC is not natively understood by common browsers and requires translation, however libraries are available for a number of languages. For data tiles in a web tool, the compression advantages offered by LERC are likely offset in terms of performance by the CPU requirements to translate the files. GeoPngDB avoids this overhead by using a native format that browsers already understand.
